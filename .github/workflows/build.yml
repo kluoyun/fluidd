@@ -3,11 +3,11 @@ name: BUILD
 on:
   push:
     branches:
-      - develop
+      - dev_xiaok
       - master
   pull_request:
     branches:
-      - develop
+      - dev_xiaok
       - master
 
 jobs:
@@ -32,12 +32,12 @@ jobs:
         run: npm run build
 
       - name: Prepare Deploy
-        if: github.ref == 'refs/heads/develop'
+        if: github.ref == 'refs/heads/dev_xiaok'
         run: |
           cp ./server/config.json ./dist/config.json
 
       - name: Deploy to Host
-        if: github.ref == 'refs/heads/develop'
+        if: github.ref == 'refs/heads/dev_xiaok'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
