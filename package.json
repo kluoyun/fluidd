@@ -38,6 +38,7 @@
     "axios": "^0.21.1",
     "consola": "^2.15.3",
     "core-js": "^3.14.0",
+    "cypress": "^3.8.3",
     "dayjs": "^1.10.5",
     "deepmerge": "^4.2.2",
     "echarts": "^5.1.2",

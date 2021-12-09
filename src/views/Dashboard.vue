@@ -50,6 +50,7 @@ import { Component, Mixins, Watch } from 'vue-property-decorator'
 import StateMixin from '@/mixins/state'
 import draggable from 'vuedraggable'
 
+import TtydCard from '@/components/widgets/ttyd/TtydCard.vue'
 import PrinterStatusCard from '@/components/widgets/status/PrinterStatusCard.vue'
 import JobsCard from '@/components/widgets/jobs/JobsCard.vue'
 import ToolheadCard from '@/components/widgets/toolhead/ToolheadCard.vue'
@@ -67,6 +68,7 @@ import { Macro } from '@/store/macros/types'
 @Component({
   components: {
     draggable,
+    TtydCard,
     PrinterStatusCard,
     JobsCard,
     ToolheadCard,

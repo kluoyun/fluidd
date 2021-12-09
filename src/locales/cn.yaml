@@ -206,7 +206,7 @@ app:
       config_files: 配置文件
       configure: 配置
       console: 控制台
-      endstops: Endstops
+      endstops: 限位状态
       fans_outputs: 风扇和输出
       history: 任务历史
       home: 仪表板
@@ -219,6 +219,7 @@ app:
       temperature: 温度
       tool: 工具
       tune: 调整
+      ttyd: 终端
     tooltip:
       estop: 紧急停止
   history:
