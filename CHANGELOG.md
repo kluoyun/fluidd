@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+
+
+## [2.0.1](https://github.com/fluidd-core/fluidd/compare/v1.7.0...v2.0.1) (2021-12-09)
+
+
+### Features
+* New beginning
+* Add a new activity card "SSH terminal" ([86d52d](https://github.com/fluidd-core/fluidd/commit/86d520d0a120964a1d011f7aa394ad3f7ecb51d7))
+
+
+
+### Bug Fixes
+* New beginning
+* None
+
 ## [1.7.0](https://github.com/fluidd-core/fluidd/compare/v1.6.3...v1.7.0) (2021-02-13)
 
 
