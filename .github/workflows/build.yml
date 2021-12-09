@@ -47,7 +47,7 @@ jobs:
            tar -zxvf ~/upx.tar.gz -C ~/
            chmod +x ~/upx
            ~/upx login $UPY_NAME $UPY_USERNAME $UPY_PASSWORD
-           ~/upx sync ./dist/ /fluidd/
+           ~/upx sync ./dist/ /
            ~/upx logout
            
        #   npm run deploy:host:dev
