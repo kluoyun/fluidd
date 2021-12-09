@@ -1,14 +1,14 @@
 name: DOCKER BUILD, DEPLOY
 
-on:
-  workflow_run:
-    workflows: ["RELEASE"]
-    types:
-      - completed
-  workflow_dispatch:
+#on:
+#  workflow_run:
+#    workflows: ["RELEASE"]
+#    types:
+#      - completed
+#  workflow_dispatch:
 
 jobs:
-  docker:
+docker:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
