@@ -39,7 +39,15 @@ jobs:
       - name: Deploy to Host
         if: github.ref == 'refs/heads/dev_xiaok'
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          UPY_NAME: ${{ secrets.UPY_NAME }}
+          UPY_USERNAME: ${{ secrets.UPY_USER }}
+          UPY_PASSWORD: ${{ secrets.UPY_PASS }}
         run: |
-          npm run deploy:host:dev
+           wget https://github.com/upyun/upx/releases/download/v0.3.5/upx_0.3.5_linux_x86_64.tar.gz -O ~/upx.tar.gz
+           tar -zxvf ~/upx.tar.gz
+           chmod +x ~/upx
+           ~/upx login $UPY_NAME $UPY_USERNAME $UPY_PASSWORD
+           ~/upx sync ./dist/ /fluidd/
+           ~/upx logout
+           
+       #   npm run deploy:host:dev
