@@ -1,6 +1,7 @@
 app:
   bedmesh:
     label:
+      box_scale: 箱规格
       flat_surface: 显示参考平面
       mesh_matrix: 网格矩阵
       probed_matrix: 探测点矩阵
@@ -10,8 +11,7 @@ app:
       wireframe: 显示网格线
     msg:
       hint: >-
-        If saving as something other than %{name}, you can choose to also remove
-        the %{name} profile
+        如果保存为 %{name} 以外的其他内容，您也可以选择删除 %{name} 配置文件
       not_found: 网床信息不存在。
       not_loaded: 没有加载
     tooltip:
@@ -23,13 +23,16 @@ app:
     label:
       current: 当前
       item: 项目
+      'off': 关闭图表
+      'on': 打开图表
       power: 电源
       target: 目标
     tooltip:
       help: 按住Shift键可缩放。<br />单击一个项目可在图形中进行切换。<br/>点击Power即可在图形中进行切换。
   console:
     label:
-      hide_temp_waits: Hide temp waits
+      auto_scroll: 自动滚屏
+      hide_temp_waits: 隐藏临时等待
     placeholder:
       command: 按'tab'自动补全命令，按'上下'键获取历史命令，输入'help' 获取命令帮助
   endpoint:
@@ -61,6 +64,7 @@ app:
     label:
       dir_name: 目录名称
       disk_usage: 磁盘使用率
+      diskinfo: 磁盘信息
       downloaded: 下载完成
       file_name: 文件名
       transfer_rate: 传输速率
@@ -75,11 +79,31 @@ app:
       add_dir: 添加目录
       add_file: 添加文件
       download_file: 下载文件
+      keyboard_shortcuts: 键盘快捷键
       rename_dir: 重命名目录
       rename_file: 重命名文件
       upload_file: 上传文件
     tooltip:
       low_on_space: 磁盘空间不足
+      root_disabled: '{root} 根不可用。 请检查您的日志。'
+  gcode:
+    btn:
+      load_current_file: 加载当前文件
+    label:
+      current_layer_height: 当前层高
+      follow_progress: 跟随进度
+      layer: 层
+      layers: 层数
+      parsed: 已解析
+      show_extrusions: 显示挤出头
+      show_moves: 显示移动路径
+      show_next_layer: 显示下一层
+      show_previous_layer: 显示上一层
+      show_retractions: 显示回抽
+    msg:
+      confirm: >-
+        文件 "%{filename}" 的大小为 %{size}，这可能会占用较多系统资源，
+        你确定吗？
   general:
     btn:
       add: 添加
@@ -95,12 +119,18 @@ app:
       config_reference: 配置参考
       download: 下载
       edit: 编辑
+      exit_layout: 退出布局模式
       extrude: 挤出
+      heaters_off: 关闭挤出加热
       load_all: 全部加载
+      more_information: 更多信息
       pause: 暂停
       preheat: 预热
+      presets: 预设
+      preview_gcode: Preview Gcode
       quad_gantry_level: 龙门架调平
       reboot: 重启
+      refresh: 刷新
       remove: 删除
       remove_all: 全部删除
       rename: 重命名
@@ -108,6 +138,7 @@ app:
       reset_file: 重置文件
       reset_layout: 重置布局
       restart_firmware: 重启Firmware
+      restart_service: 重启 %{service}
       restart_service_klipper: 重启Klipper
       restart_service_moonraker: 重启Moonraker
       resume: 恢复
@@ -115,45 +146,71 @@ app:
       save: 保存
       save_as: 另存为
       save_restart: 保存并重启
+      send: 发送
+      set_color: 设置颜色
       shutdown: 关闭
+      socket_reconnect: 重新连接
       socket_refresh: 强制刷新
       upload: 上传
       upload_print: 上传并打印
       view: 视图
     error:
       app_setup_link: >-
-        Fluidd setup requirements can be found <a target="_blank"
-        href="%{url}">here.</a>
+        Fluidd 设置要求可以在<a target="_blank"
+        href="%{url}">这里</a>找到。
       app_warnings_found: 找到％{appName}条警告。
       components_config: 可以在<a target="_blank" href="%{url}">此处</a>找到Moonraker插件配置。
       failed_components: Moonraker的插件失败，请检查您的日志，更新您的配置并重新启动moonraker。
     label:
       accel_to_decel: 加速到减速
       acceleration: 加速
+      actual_time: 实际
       add_camera: 添加摄像头
       add_preset: 添加预设
+      add_user: 添加用户
+      api_key: API KEY
       api_url: API URL
+      category: 宏
+      change_password: 更改密码
+      clear_all: 清除所有
+      color: 颜色
       confirm: 确认
+      current_password: 当前密码
+      disabled_while_printing: 打印时禁用
       edit_camera: 编辑摄像头
       edit_preset: 编辑预设
+      edit_user: 编辑用户
       extrude_length: 挤出长度
       extrude_speed: 挤出速度
+      filament: 耗材
+      file: 文件
+      finish_time: 结束
       flow: 流量
       free: 释放
       high: 高
       host: 主机
-      layout: 层
+      layer: 层
+      layout: 布局
       longest_job: 最长的任务
       low: 低
+      m117: M117
       name: 名称
+      new_password: 新密码
+      no_notifications: 无通知
       'off': 关闭
+      password: 密码
       power: 电源
       printers: 打印机
+      progress: 进度
       requested_speed: 请求的速度
+      retract_length: 回抽长度
+      retract_speed: 回抽速度
       save_as: 另存为
       services: 服务
+      slicer: 切片
       speed: 速度
       sqv: 角速度
+      total: 总计
       total_filament: 总消耗耗材
       total_filament_avg: 平均消耗耗材
       total_jobs: 所有打印任务
@@ -161,16 +218,27 @@ app:
       total_print_time_avg: 平均打印时间
       total_time: 合计时间
       total_time_avg: 平均时间
+      uncategorized: 未分类
+      unretract_extra_length: 回抽额外挤出长度
+      unretract_speed: 回抽速度
       used: 已使用
       variance: 偏差值
       velocity: 速度
+      visible: 可视
       z_offset: Z偏移
+    msg:
+      password_changed: 密码已更改
+      wrong_password: 你的密码正确吗？
+
     simple_form:
       error:
+        arrayofnums: 仅数字
+        exists: 已经存在
         invalid_url: 无效的URL
         max: 最大 %{max}
         min: 最小 %{min}
         min_or_0: 最小 %{min} 至 0
+        password_username: 用户名不匹配
         required: 必填
       msg:
         confirm: 确定吗？
@@ -183,6 +251,7 @@ app:
         estimated_time: 估计时间
         filament: 耗材长度
         filament_used: 使用长度
+        filament_weight_total: 耗材重量
         first_layer_bed_temp: 首层热床温度
         first_layer_extr_temp: 首层挤出温度
         first_layer_height: 首层高度
@@ -204,24 +273,32 @@ app:
       bedmesh_controls: 网床控制
       camera: 摄像头
       config_files: 配置文件
+      other_files: 其他文件
       configure: 配置
       console: 控制台
       endstops: 限位状态
       fans_outputs: 风扇和输出
+      gcode_preview: Gcode Preview [ 测试 ]
       history: 任务历史
       home: 仪表板
       jobs: 任务
       limits: 打印机限制
       macros: 宏
+      retract: 固件回抽
       runout_sensors: Runout传感器
       settings: 设置
       stats: 打印状态
+      system: 系统
+      system_overview: 系统信息
       temperature: 温度
       tool: 工具
       tune: 调整
       ttyd: 终端
     tooltip:
       estop: 紧急停止
+      reload_klipper: 重新加载 klipper 配置。
+      reload_restart_klipper: 重新加载 klipper 配置并重新启动 MCU。
+      restart_klipper: 重新启动 klipper 系统服务。
   history:
     msg:
       confirm: 确定吗？这将清除所有历史记录和打印机统计信息
@@ -239,12 +316,14 @@ app:
     btn:
       add_camera: 添加摄像头
       add_thermal_preset: 添加预设
+      add_user: 添加用户
       reset: 重置
       select_theme: 选择主题
     camera_type_options:
       mjpegadaptive: MJpegAdaptive
       mjpegstream: MJpegStream
       video: IpCamera
+      iframe: HTTP页面
     label:
       all_off: 全部关闭
       all_on: 全部打开
@@ -252,23 +331,34 @@ app:
       camera_flip_y: 垂直翻转
       camera_stream_type: 视频流类型
       camera_url: 摄像头地址
+      confirm_on_estop: 需要确认紧急停止
       dark_mode: 黑暗模式
       default_extrude_length: 默认挤出长度
       default_extrude_speed: 默认挤出速度
       default_toolhead_move_length: 默认打印头移动距离
       default_toolhead_xy_speed: 默认打印头XY轴速度
       default_toolhead_z_speed: 默认打印头Z轴速度
+      draw_background: 绘制背景
       enable: 启用
       enable_notifications: 更新提示
+      extrusion_line_width: 挤出线宽
+      flip_horizontal: 水平翻转
+      flip_vertical: 垂直翻转
       fps_target: FPS
+      height: 高度
       gcode_coords: 使用GCode坐标
       invert_x_control: 反转X轴控制
       invert_y_control: 反转Y轴控制
       invert_z_control: 反转Z轴控制
       language: 显示语言
+      move_line_width: 移动线宽
       primary_color: 主色调
       printer_name: 打印机名称
       reset: 重置设定
+      retraction_icon_size: 缩放图标大小
+      show_animations: 显示动画
+      theme_preset: 社区预设
+      thermal_preset_gcode: GCode
       thermal_preset_name: 预设名称
       z_adjust_values: Z轴调整值
     timer_options:
@@ -277,7 +367,9 @@ app:
       file: 通过文件估算
       slicer: 使用切片文件的时间
     title:
+      authentication: 认证
       camera: 摄像头
+      gcode_preview: Gcode Preview
       general: 一般
       macros: 宏
       theme: 主题
@@ -289,6 +381,33 @@ app:
     msg:
       connecting: 连接到moonraker ...
       no_connection: 没有moonraker连接。请检查moonraker的状态和或刷新。
+  system_info:
+    label:
+      capacity: 容量
+      cpu_desc: CPU信息
+      distribution_codename: 发行版本
+      distribution_like: 发行版本类型
+      distribution_name: 发行版本名称
+      hardware_desc: 硬件信息
+      hostname: 主机名
+      klipper_load: Klipper占用
+      manufactured: 生产日期
+      manufacturer: 生产厂家
+      mcu_awake: '{mcu} 启动时间'
+      mcu_bandwidth: '{mcu} 带宽'
+      mcu_load: '{mcu} 占用'
+      model: CPU型号
+      moonraker_load: Moonraker占用
+      processor_desc: 处理器
+      product_name: 产品名称
+      serial_number: 序列号
+      system_load: 系统占用
+      system_memory: 系统内存
+      system_utilization: 系统利用率
+      total_memory: 总内存
+  ttyd:
+    btn:
+      refresh: 刷新
   tool:
     btn:
       home_x: X
@@ -297,19 +416,23 @@ app:
       extruder_disabled: 挤出机操作已被禁用，低于 min_extrude_temp 设置的最低温度 (%{min}<small>°C</small>)
       home_xy: Home XY
       home_z: Home Z
+      motors_off: 关闭电机
   version:
     btn:
       check_for_updates: 检查更新
       finish: 完成
       update: 更新
+      view_versions: 查看版本
     label:
       commit_history: 提交历史
       commits_on: 提交于
       committed: 提交完成
       dirty: 肮脏
       invalid: 无效
+      os_packages: 系统包
       package_list: 包列表
       up_to_date: 最新
+      updates_available: 有可用更新
     status:
       finished: 更新已完成
       updating: 正在更新...

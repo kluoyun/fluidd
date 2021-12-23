@@ -33,7 +33,7 @@
           :disabled="!klippyReady || printerPrinting"
           small
           class="ml-1">
-            MOTORS OFF
+            {{$t('app.tool.tooltip.motors_off')}}
         </app-btn>
         <app-btn
           v-if="printerSupportsBedScrews"

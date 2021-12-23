@@ -305,6 +305,7 @@ app:
       temperature: Thermals
       tool: Tool
       tune: Tune
+      ttyd: Terminal
     tooltip:
       estop: Emergency Stop
       reload_klipper: Reloads klipper configuration.

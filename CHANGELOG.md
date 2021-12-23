@@ -4,7 +4,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-## [2.0.1](https://github.com/fluidd-core/fluidd/compare/v1.7.0...v2.0.1) (2021-12-09)
+## [2.0.3](https://github.com/kluoyun/fluidd/compare/v2.0.1...v2.0.3) (2021-12-23)
+
+
+### Bug Fixes
+* Improve and complete the Chinese translation
+* Cancel the terminal automatic loading, now you need to manually click the "refresh" button to load
+
+
+## [2.0.1](https://github.com/kluoyun/fluidd/compare/v1.7.0...v2.0.1) (2021-12-09)
 
 
 ### Features

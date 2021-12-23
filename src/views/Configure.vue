@@ -15,12 +15,12 @@
     </v-col>
     <v-col cols="12" md="6">
       <collapsable-card
-        title="Other Files"
+        :title="$t('app.general.title.other_files')"
         icon="$files"
         :draggable="false"
       >
         <file-system
-          :roots="['logs', 'docs', 'config_examples']"
+          :roots="['logs','docs','config_examples']"
           :max-height="816"
           name="configure">
         </file-system>
